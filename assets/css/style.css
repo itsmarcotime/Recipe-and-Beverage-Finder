@@ -1,0 +1,20 @@
+body {
+    background-color: #e9f0ce;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    font-size: medium;
+    color: whitesmoke;
+    background-color: #687339;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.form-input {
+    padding: 7px 15px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
