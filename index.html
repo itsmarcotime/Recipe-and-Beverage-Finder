@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
 </head>
 
@@ -35,10 +37,22 @@
         </section>
 
         <!-- Div box for Recipe API -->
-        <div id="recipeData"></div>
+        <div id="recipeData">
+        
+            <h4>Showing Recipe Results For: <span id="recipe-search-term"></span></h4>
+        
+            <div id="recipe-container" class="list-group"></div>
+        
+        </div>
 
         <!-- Div box for MAPS api OR DRINKS api -->
-        <div id="mapsData"></div>
+        <div id="mapsData">
+        
+            <h4>Showing Drink Results For: <span id="drink-search-term"></span></h4>
+        
+            <div id="drink-container" class="list-group"></div>
+        
+        </div>
 
 
         <!-- div box for about website section -->
