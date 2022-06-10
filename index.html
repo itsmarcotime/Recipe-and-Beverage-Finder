@@ -6,105 +6,70 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Finder</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
 
 </head>
 
 <body>
 
-    <div class="columns">
-    
-        <header class="column is-12">
-    
-            <h2>Recipe Finder</h2>
-    
-        </header>
+    <header>
 
-    </div>
-    
+        <h2>Recipe Finder</h2>
+
+    </header>
+
     <main>
-    
-        <div class="columns">
-    
-            <!-- Search Input & button here -->
-            <section class="column is-12">
-    
-                <form>
-    
-                    <label for="recipe">Search Recipes Here:</label>
-                    <input type="text" placeholder="Search Recipes!" name id="search" class="form-input" />
-                    <button type="submit" class="btn">Search!</button>
-    
-                </form>
-    
-            </section>
-    
-        </div>
-    
-        <div class="columns">
-    
-            <!-- Div box for Recipe API -->
-            <div id="recipeData" class="column is-6">
-    
-                <h4>Showing Recipe Results For: <span id="recipe-search-term"></span></h4>
-    
-                <div id="recipe-container" class="list-group"></div>
-    
-            </div>
-    
-            <!-- Div box for MAPS api OR DRINKS api -->
-            <div id="mapsData" class="column">
-    
-                <h4>Showing Drink Results For: <span id="drink-search-term"></span></h4>
-    
-                <div id="drink-container" class="list-group"></div>
-    
-            </div>
-    
-        </div>
-    
-        <div class="columns">
-    
-    
-            <!-- div box for about website section -->
-            <div class="column is-12">
-    
-                <h3>About:</h3>
-    
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi, nisi
-                    quam non ex eaque,
-                    velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt?
-                </p>
-    
-            </div>
-        </div>
-    
-        <div class="columns">
-    
-            <!-- div box for credit -->
-            <div class="column is-12">
-    
-                <h3>Appication Created By:</h3>
-    
-                <ul>
-                    <li>Yussel</li>
-                    <li>Zachary</li>
-                    <li>Marco</li>
-                </ul>
-    
-            </div>
-    
-        </div>
-    
-    
-    </main>
+        
+        <!-- Search Input & button here -->
+        <section>
 
-    <script src="./assets/js/script.js"></script>
+            <form>
+
+                <label for="search">Search Recipes Here:</label>
+                <input type="text" placeholder="Search Recipes!" id="search-input" class="form-input" />
+                <button type="submit" class="btn" id="search-btn">Search!</button>
+
+            </form>
+            
+        </section>
+
+        <!-- Div box for Recipe API -->
+        <div id="recipe-result"></div>
+
+        <!-- Div box for MAPS api OR DRINKS api -->
+        <div id="mapsData"></div>
+
+
+        <!-- div box for about website section -->
+        <div class="about">
+
+            <h3>About:</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi, nisi quam non ex eaque, 
+                velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt?
+            </p>
+
+        </div>
+
+        <!-- div box for credit -->
+        <div class="credit">
+
+            <h3>Appication Created By:</h3>
+
+            <ul>
+                <li>Yussel</li>
+                <li>Zachary</li>
+                <li>Marco</li>
+            </ul>
+
+        </div>
+
+
+    </main>
     
+    <script src="./recipe.js"></script>
 </body>
 
 </html>
