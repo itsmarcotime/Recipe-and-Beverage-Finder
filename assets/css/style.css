@@ -4,11 +4,35 @@ body {
 }
 
 header {
-    font-size: medium;
-    color: whitesmoke;
     background-color: #687339;
     border-radius: 10px;
     align-items: center;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: whitesmoke;
+    margin-left: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 53px;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .form-input {
