@@ -35,10 +35,42 @@ header nav ul li a {
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+.hero {
+    background-image: url(../images/project-1-cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    padding: 125px;
+}
+
+.hero-div {
+    text-align: center;
+}
+
+.hero-div button {
+    color: whitesmoke;
+    background-color: #687339;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-div button:hover {
+    background-color: #3b3f20;
+}
+
 .form-input {
     padding: 7px 15px;
     font-size: 16px;
-    width: 100%;
+    width: 80%;
     margin-bottom: 15px;
     border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
