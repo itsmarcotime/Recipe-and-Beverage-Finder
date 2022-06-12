@@ -108,4 +108,20 @@ header nav ul li a {
 
 
 /* start about section */
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3b3f20;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 90%;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.about-info {
+    text-align: center;
+    font-weight: bold;
+}
 
