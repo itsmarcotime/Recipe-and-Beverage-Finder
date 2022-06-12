@@ -1,0 +1,131 @@
+body {
+    background-color: #e9f0ce;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* header style start */
+header {
+    background-color: #687339;
+    border-radius: 10px;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: whitesmoke;
+    margin-left: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 53px;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+/* header style end*/
+
+
+/*hero style start */
+.hero {
+    background-image: url(../images/project-1-cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    padding: 125px;
+}
+
+.hero-div {
+    text-align: center;
+}
+
+.hero-div button {
+    color: whitesmoke;
+    background-color: #687339;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.hero-div button:hover {
+    background-color: #3b3f20;
+}
+
+.form-input {
+    padding: 7px 15px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
+/* hero end */
+
+
+/* start recipe & drink box styles */
+.box-data {
+    padding-bottom: 50px;
+}
+
+.recipe-box {
+    border: #3b3f20 solid 3px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.drink-box {
+    border: #3b3f20 solid 3px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.recipe-box h4, .drink-box h4 {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+/* end recipe & drink */
+
+
+/* start about section */
+.about-class{
+    padding-bottom: 20px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3b3f20;
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 90%;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.about-info {
+    text-align: center;
+    font-weight: bold;
+}
+
