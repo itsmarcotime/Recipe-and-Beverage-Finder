@@ -6,70 +6,162 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recipe Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
 </head>
 
 <body>
 
-    <header>
+    
+    
+        <header class="columns">
+    
+            <h1 class="column is-10">
+                <a href="#">Recipe Finder</a>
+            </h1>
 
-        <h2>Recipe Finder</h2>
+            <div class="column is-2">
 
-    </header>
+                <nav class="columns">
 
+                    <ul>
+    
+                        <li class="column is-6">
+                            <a href="#about-info">About</a>
+                        </li>
+    
+                        <li class="column is-6">
+                            <a href="#creator-info">Creators</a>
+                        </li>
+    
+                    </ul>
+    
+                </nav>
+
+            </div>
+    
+        </header>
+
+    
+    
     <main>
+    
+        <div class="columns hero">
+    
+            <!-- Search Input & button here -->
+            <section class="column is-12">
+
+                <div class="hero-div">
+
+                    <form>
+    
+                        <input type="text" placeholder="Start Searching For New Recipes Here!" name id="search" class="form-input" /><br>
+                        <button type="submit" class="btn">Search!</button>
         
-        <!-- Search Input & button here -->
-        <section>
+                    </form>
 
-            <form>
+                </div>
+    
+            </section>
+    
+        </div>
+    
+        <div class="columns box-data">
+    
+            <!-- Div box for Recipe API -->
+            <div id="recipeData" class="column is-6 recipe-box">
 
-                <label for="search">Search Recipes Here:</label>
-                <input type="text" placeholder="Search Recipes!" id="search-input" class="form-input" />
-                <button type="submit" class="btn" id="search-btn">Search!</button>
+                <div class="recipe-title">
 
-            </form>
+                    <h4>Showing Recipe Results For: <span id="recipe-search-term"></span></h4>
+
+                </div>
+    
+                <div id="recipe-container" class="list-group"></div>
+    
+            </div>
+    
+            <!-- Div box for MAPS api OR DRINKS api -->
+            <div id="mapsData" class="column is-5 drink-box">
+
+                <div class="drink-title">
+
+                    <h4>Showing Drink Results For: <span id="drink-search-term"></span></h4>
+
+                </div>
+    
+                <div id="drink-container" class="list-group"></div>
+    
+            </div>
+    
+        </div>
+        
+        <!-- about section -->
+        <section class="columns about-class">
+    
+            <!-- div box for about website section -->
+            <div id="about-info" class="column is-12">
+    
+                <h2 class="section-title">About</h2>
+    
+                <p class="about-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi, nisi
+                    quam non ex eaque, velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt? 
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque et perferendis sed porro nemo numquam veritatis 
+                    officiis natus non eligendi fugit repellendus, debitis ut at quod neque placeat aspernatur recusandae unde iure! 
+                    Possimus aut modi ut incidunt, earum nulla aperiam adipisci nobis dolor a quae id, laboriosam in? 
+                </p>
+    
+            </div>
+
+        </section>
+        
+        <!-- nutrition section -->
+        <section class="columns">
+
+            <div class="column is-6">
+                <h2>Nutrition breif:</h2>
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt architecto, quaerat explicabo non 
+                    consectetur suscipit dolore quibusdam molestiae. Adipisci maxime fugiat vel repellendus cum vero.
+                </p>
+            </div>
+
+            <div class="column is-5 fun-slide">
+                <h2>Fun Facts!</h2>
+            </div>
             
         </section>
 
-        <!-- Div box for Recipe API -->
-        <div id="recipeData"></div>
-
-        <!-- Div box for MAPS api OR DRINKS api -->
-        <div id="mapsData"></div>
-
-
-        <!-- div box for about website section -->
-        <div class="about">
-
-            <h3>About:</h3>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi, nisi quam non ex eaque, 
-                velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt?
-            </p>
-
-        </div>
-
-        <!-- div box for credit -->
-        <div class="credit">
-
-            <h3>Appication Created By:</h3>
-
-            <ul>
-                <li>Yussel</li>
-                <li>Zachary</li>
-                <li>Marco</li>
-            </ul>
-
-        </div>
-
-
-    </main>
+        <!-- box for creators -->
+        <section class="columns">
     
+            <div class="column is-12" id="creator-info">
+    
+                <h3>Appication Created By:</h3>
+    
+                <ul>
+                    <li>Yussel</li>
+                    <li>Zachary</li>
+                    <li>Marco</li>
+                </ul>
+    
+            </div>
+    
+        </section>
+
+        <footer>
+            this is a footer
+        </footer>
+    
+    </main>
+
     <script src="./recipe.js"></script>
+    
 </body>
 
 </html>
