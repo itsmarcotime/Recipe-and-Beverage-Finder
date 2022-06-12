@@ -108,6 +108,10 @@ header nav ul li a {
 
 
 /* start about section */
+.about-class{
+    padding-bottom: 20px;
+}
+
 .section-title {
     font-size: 48px;
     font-weight: bold;
