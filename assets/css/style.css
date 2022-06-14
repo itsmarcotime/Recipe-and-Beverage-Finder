@@ -218,4 +218,16 @@ header nav ul li a {
 .name-border a:hover {
     color: #3b3f20;
 }
+/* end creators style */
+
+
+/* start footer style */
+footer {
+    background-color: #687339;
+    width: 100%;
+    padding: 40px 35px;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 75px;
+}
 
