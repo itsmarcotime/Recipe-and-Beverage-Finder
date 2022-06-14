@@ -1,9 +1,9 @@
 var userFormEl = document.querySelector("#user-form");
 var searchFormEl = document.querySelector("#search-form");
-var recipeContainerEl = document.querySelector("recipe-container");
-var result = document.querySelector("recipe-result"); 
+var recipeContainerEl = document.querySelector("#recipe-container");
+var result = document.querySelector("#recipe-result"); 
 
-var searchBtn = document.querySelector("search-btn");
+var searchBtn = document.querySelector("#search-btn");
 
 
 
