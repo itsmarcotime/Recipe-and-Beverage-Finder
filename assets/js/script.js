@@ -51,11 +51,22 @@ var formSubmitHandler = function(event) {
     }
 };
 
-var myMeal = function() {
-
+var displayMeal = function(data, searchTerm) {
+    // check to see if there are any recipes
+    if (data.meals === 0) {
+        recipeContainerEl.textContent = "No recipes were found";
+        return;
+    }
     // clear old content
     recipeContainerEl.textContent = "";
-    result.textContent = searchedTerm;
+    result.textContent = searchTerm;
+
+    // probable for loop to go through all of the different meals 
+
+    // create element for recipe name and image
+    // create element for ingredients/measurements
+    // create element for recipe
+    // append everything 
 }
 
 userFormEl.addEventListener("submit", formSubmitHandler);
