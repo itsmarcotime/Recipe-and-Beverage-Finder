@@ -13,6 +13,7 @@ var getRecipe = function(recipe) {
     // make request to api
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
+            // displayMeal(data, meals);
             let myMeal = data.meals[0]; 
             console.log(myMeal);
             console.log(myMeal.strMealThumb);
@@ -51,16 +52,10 @@ var formSubmitHandler = function(event) {
     }
 };
 
-var displayMeal = function(data, searchTerm) {
+var displayMeal = function(meals, searchTerm) {
     // check to see if there are any recipes
-    if (data.meals === 0) {
-        recipeContainerEl.textContent = "No recipes were found";
-        return;
-    }
-    // clear old content
-    recipeContainerEl.textContent = "";
-    result.textContent = searchTerm;
-
+    console.log(meals);
+    console.log(searchTerm);
     // probable for loop to go through all of the different meals 
 
     // create element for recipe name and image
