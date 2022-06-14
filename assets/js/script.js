@@ -60,9 +60,9 @@ var displayMeal = function(recipe, searchTerm) {
     recipeContainerEl.textContent = "";
     result.textContent = searchTerm; 
     // probable for loop to go through all of the different meals 
-    for (var i = 0; i <recipe.length; i++) {
+    for (var i = 0; i <recipe.meals.length; i++) {
         // format recipe name with ingredients/measurements, and intructions
-        var recipeName = recipe[i].strMeal + recipe[i].strArea + recipe[i].strIngredient + recipe[i].strMeasure + recipe[i].strInstructions;
+        var recipeName = recipe.meals[i].strMeal + recipe.meals[i].strArea + recipe.meals[i].strIngredient + recipe.meals[i].strMeasure + recipe.meals[i].strInstructions;
 
         // create container for recipe
         var recipeEl = document.createElement("div");
