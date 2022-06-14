@@ -155,7 +155,7 @@ header nav ul li a {
     width: 336px;
     height: 200px;
     border-radius: 60px;
-    border: #3b3f20 solid 3px;
+    border: #687339 solid 3px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -182,4 +182,40 @@ header nav ul li a {
 
 
 /* start creators style */
+.creator-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3b3f20;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 90%;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+    margin-top: 40px;
+}
+
+.creator-name {
+    font-size: 48px;
+    color: #3b3f20;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    margin-top: 40px;
+}
+
+.name-border {
+    border: #3b3f20 solid 3px;
+    border-radius: 25px;
+    background-color: #687339;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.name-border a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.name-border a:hover {
+    color: #3b3f20;
+}
 
