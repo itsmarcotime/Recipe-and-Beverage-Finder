@@ -8,6 +8,12 @@ header {
     background-color: #687339;
     border-radius: 10px;
     align-items: center;
+    background-image: url(../images/project-1-cover.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
+    z-index: 99999999;
 }
 
 header h1 {
@@ -16,6 +22,12 @@ header h1 {
     color: whitesmoke;
     margin-left: 10px;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: #3b3f20 solid 3px;
+    border-radius: 25px;
+    background-color: #687339;
+    margin-top: 30px;
+    margin-left: 24px;
+    text-align: center;
 }
 
 header a {
@@ -31,9 +43,11 @@ header nav ul {
 
 header nav ul li a {
     padding: 10px 15px;
-    font-weight: lighter;
-    font-size: 1.55vw;
+    font-weight: bold;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: #3b3f20 solid 3px;
+    border-radius: 15px;
+    background-color: #687339;
 }
 /* header style end*/
 
