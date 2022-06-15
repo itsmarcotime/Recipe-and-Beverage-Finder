@@ -2,6 +2,7 @@ var userFormEl = document.querySelector("#user-form");
 var searchFormEl = document.querySelector("#search-form");
 var recipeContainerEl = document.querySelector("#recipe-container");
 var result = document.querySelector("#recipe-result"); 
+var drinkFormEl = document.querySelector('#drink-srch');
 
 var searchBtn = document.querySelector("#search-btn");
 
@@ -42,12 +43,14 @@ var formSubmitHandler = function(event) {
 
     // getting value from input element 
     var searchedRecipe = searchFormEl.value.trim();
+    let searchedCocktail = drinkFormEl.value.trim();
 
     if (searchedRecipe) {
         getRecipe(searchedRecipe);
         searchFormEl.value="";
-    } else {
-        alert("Please enter a correct recipe search.")
+    } else if (searchedCocktail) {
+        getIngredient(searchedCocktail);
+        drinkFormEl.value="";
     }
 };
 
@@ -82,6 +85,17 @@ let cocktailRand = function() {
     });
 };
 
+let getIngredient = function (ingred) {
+    var apiUrl = ("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + ingred);
+
+    fetch(apiUrl).then(function(response) { 
+        response.json().then(function(data) {
+            let myDrink = data;
+            console.log(myDrink);
+        });
+    });
+};
+
 let displayDrink = function(drink) {
     console.log(drink);
 
@@ -106,5 +120,3 @@ let displayDrink = function(drink) {
     console.log(ingredients);
     console.log(isAlcoholic);
 }
-
-cocktailRand();
