@@ -8,6 +8,8 @@ var drinkIngredientEl = document.querySelector('#drink-ingredients');
 var drinkResult = document.querySelector('#drink-search-term');
 var drinkInstructionsEl = document.querySelector('#drink-instruct');
 var searchBtn = document.querySelector("#search-btn");
+var mealSaveEl = document.querySelector('#meal-save');
+var drinkSaveEl = document.querySelector('#drink-save');
 
 
 
@@ -140,5 +142,13 @@ let displayDrink = function(drink) {
     console.log(isAlcoholic);
 }
 
+let mealStore = function(event) {
+    event.preventDefault();
+
+    let drinkInfo = IngredientEl.textContent;
+    console.log(drinkInfo);
+}
+
+drinkSaveEl.addEventListener("click", mealStore);
 userFormEl.addEventListener("submit", formSubmitHandler);
 userFormEl.addEventListener("click", cocktailRand);

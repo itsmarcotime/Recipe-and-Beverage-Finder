@@ -93,7 +93,10 @@
                 </div>
 
                 <div id="recipe-container" class="list-group"></div>
-
+                
+                <form id="meal-save">
+                    <button type="click" class="btn" id="meal-ingredient">save to shopping list</button>
+                </form>
             </div>
 
             <!-- Div box for MAPS api OR DRINKS api -->
@@ -108,10 +111,12 @@
                 <div id="drink-container" class="list-group">
                     <ul id="drink-ingredients" ></ul>
                     <span id="drink-instruct"></span>
+
+                    <form id="drink-save">
+                        <button type="click" class="btn" id="drink-ingredient">save to shopping list</button>
+                    </form>
                 </div>
-
             </div>
-
         </div>
 
         <!-- Search History here-->
@@ -149,18 +154,17 @@
         </section>
 
         <!-- nutrition section -->
-        <section class="columns" id="nutrition-id">
+        <section class="columns" id="grocery-id">
 
-            <div class="column is-4 nutrition-box">
+            <div class="column is-4 grocery-box">
 
-                <h2 class="nutrition-title">Nutrition breif:</h2>
+                <h2 class="grocery-title">Grocery List</h2>
 
-                <img src="./assets/images/new_nutrition_img.webp" alt="Balance Your Meals!" class="nutrition-img" />
+                <img src="./assets/images/new_nutrition_img.webp" alt="Balance Your Meals!" class="grocery-img" />
 
-                <p class="nutrition-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt architecto, quaerat explicabo non
-                    consectetur suscipit dolore quibusdam molestiae. Adipisci maxime fugiat vel repellendus cum vero.
-                </p>
+                <div class="grocery-info">
+                    <ul id="grocery-list"></ul>
+                </div>
 
             </div>
 
