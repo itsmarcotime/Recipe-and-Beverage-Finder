@@ -70,3 +70,41 @@ var displayMeal = function(data, searchTerm) {
 }
 
 userFormEl.addEventListener("submit", formSubmitHandler);
+
+let cocktailRand = function() {
+    var apiRand = ("https://www.thecocktaildb.com/api/json/v1/1/random.php");
+
+    fetch(apiRand).then(function(response) { 
+        response.json().then(function(data) {
+            let myDrink = data.drinks[0];
+            displayDrink(myDrink);
+        });
+    });
+};
+
+let displayDrink = function(drink) {
+    console.log(drink);
+
+    let drinkName = drink.strDrink;
+    let instruct = drink.strInstructions;
+    let isAlcoholic = drink.strAlcoholic;
+    let count = 1;
+    let ingredients = [];
+
+    for (let i in drink) {
+        let ingredient = "";
+        let measure = "";
+        if (i.startsWith("strIngredient") && drink[i]) {
+            ingredient = drink[i];
+            measure = drink["strMeasure" + count];
+            count += 1;
+            ingredients.push(`${measure} ${ingredient}`); 
+        }
+    }
+    console.log(drinkName);
+    console.log(instruct);
+    console.log(ingredients);
+    console.log(isAlcoholic);
+}
+
+cocktailRand();
