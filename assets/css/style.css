@@ -196,6 +196,12 @@ header nav ul li a {
     text-align: center;
     font-weight: bold;
 }
+.grocery-name {
+    font-size: 20px;
+}
+.ingredient-name {
+    font-size: 15px;
+}
 
 .fun-title {
     font-size: 20px;
