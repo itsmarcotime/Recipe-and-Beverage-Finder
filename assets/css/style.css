@@ -137,6 +137,21 @@ header nav ul li a {
 /* end recipe & drink */
 
 
+/* start search history here */
+.search-history {
+    border: #3b3f20 solid 3px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.search-history h4 {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+/* end search history */
+
+
 /* start about section */
 .about-class{
     padding-bottom: 20px;
