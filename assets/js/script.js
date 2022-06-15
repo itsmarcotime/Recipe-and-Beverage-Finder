@@ -14,26 +14,6 @@ var getRecipe = function(recipe) {
     fetch(apiUrl).then(function(response) {
         response.json().then(function(data) {
             displayMeal(data, recipe);
-            // let myMeal = data.meals[0]; 
-            // console.log(myMeal);
-            // console.log(myMeal.strMealThumb);
-            // console.log(myMeal.strMeal);
-            // console.log(myMeal.strArea);
-            // console.log(myMeal.strCategory);
-            // console.log(myMeal.strInstructions);
-            // let count = 1;
-            // let ingredients = [];
-            // for (let i in myMeal) {
-            //     let ingredient = "";
-            //     let measure = "";
-            //     if (i.startsWith("strIngredient") && myMeal[i]) {
-            //         ingredient = myMeal[i];
-            //         measure = myMeal["strMeasure" + count];
-            //         count += 1;
-            //         ingredients.push(`${measure} ${ingredient}`); 
-            //     }
-            // }
-            // console.log(ingredients);
         });
     });
 };
@@ -57,12 +37,27 @@ var displayMeal = function(recipe, searchTerm) {
     console.log(recipe);
     console.log(searchTerm);
 
+
+let myMeal = recipe.meals[0]; 
+let count = 1;
+let ingredients = [];
+for (let i in myMeal) {
+    let ingredient = "";
+    let measure = "";
+    if (i.startsWith("strIngredient") && myMeal[i]) {
+    ingredient = myMeal[i];
+    measure = myMeal["strMeasure" + count];
+    count += 1;
+    ingredients.push(`${measure} ${ingredient}`); 
+                }
+            }
+
     recipeContainerEl.textContent = "";
     result.textContent = searchTerm; 
     // probable for loop to go through all of the different meals 
     for (var i = 0; i <recipe.meals.length; i++) {
         // format recipe name with ingredients/measurements, and intructions
-        var recipeName = recipe.meals[i].strMeal + recipe.meals[i].strArea + recipe.meals[i].strIngredient + recipe.meals[i].strMeasure + recipe.meals[i].strInstructions;
+        var recipeName = recipe.meals[i].strMeal + " " + recipe.meals[i].strArea + " " + myMeal.strInstructions + " " + myMeal.strMeasure + " " + recipe.meals[i].strInstructions;
 
         // create container for recipe
         var recipeEl = document.createElement("div");
