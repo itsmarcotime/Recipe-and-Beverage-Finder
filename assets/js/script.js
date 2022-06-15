@@ -90,8 +90,8 @@ let getIngredient = function (ingred) {
 
     fetch(apiUrl).then(function(response) { 
         response.json().then(function(data) {
-            let myDrink = data;
-            console.log(myDrink);
+            let myDrink = data.drinks[0];
+            displayDrink(myDrink);
         });
     });
 };
