@@ -281,4 +281,71 @@ footer {
     color: whitesmoke;
     margin-top: 75px;
 }
+/* end footer*/
+
+
+/* start media queries for desktop */
+@media screen and (max-width: 980px) {
+    header nav ul li a {
+        margin-left: -40px;
+    }
+
+    .creator-name {
+        font-size: 37px;
+    }
+}
+/* end desktop queries */
+
+
+/* start media queries for tablets */
+@media screen and (max-width: 768px) {
+    header h1 {
+        margin-top: 12px;
+        margin-left: 85px;
+        margin-right: 107px;
+    }
+
+    header nav ul li a {
+        margin-left: 45px;
+    }
+
+    .recipe-box, .drink-box, .grocery-box, .fun-slide, .link-name-box {
+        margin: 20px;
+    }
+
+}
+/* end queries for tablets */
+
+
+/* start media queries for mobile phones */
+@media screen and (max-width: 576px) {
+    header h1 {
+        font-size: 17px;
+    }
+
+    header nav ul {
+        margin-right: 0px;
+    }
+
+    header nav ul li a {
+        margin: -2px;
+    }
+
+    .form-input {
+        width: 100%
+    }
+
+    .hero-div button {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    .form-input {
+        width: 187%;
+        margin-left: -65px;
+    }
+
+}
 
