@@ -6,69 +6,206 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe & Beverage Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
 </head>
 
 <body>
 
-    <header>
+    <header class="columns">
 
-        <h2>Recipe Finder</h2>
+        <h1 class="column is-3">
+            <a href="#">Recipe & Beverage Finder</a>
+        </h1>
+
+        <div class="column"></div>
+
+        <div class="column is-4">
+
+            <nav class="columns">
+
+                <ul>
+
+                    <li class="column is-2 is-offset-1">
+                        <a href="#about-info">About</a>
+                    </li>
+
+                    <div class="column is-2"></div>
+
+                    <li class="column is-3">
+                        <a href="#grocery-id">Groceries</a>
+                    </li>
+
+                    <div class="column is-2"></div>
+
+                    <li class="column is-2">
+                        <a href="#creator-info">Creators</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
 
     </header>
 
     <main>
+
+        <div class="columns hero">
+
+            <!-- Search Input & button here -->
+            <section class="column is-12">
+
+                <div class="hero-div">
+
+                    <form id="user-form">
+                    
+                            <input type="text" placeholder="Start Searching For New Recipes Here!" id="search-form"
+                                class="form-input" />
+
+                            <input type="text" placeholder="Start Searching For New Beverages Here!" id="drink-srch"
+                                class="form-input" /><br>
+
+                            <button type="submit" class="btn" id="search-btn">Search for Recipe & Beverage!</button>
+                            <button type="button" class="btn" id="rand-btn">Random Search!</button>
+                
+                    </form>
+                    
+                </div>
+
+            </section>
+
+        </div>
+
+        <div class="columns box-data">
+
+            <!-- Div box for Recipe API -->
+            <div id="meal-description" class="column is-6 recipe-box">
+
+                <div class="recipe-title">
+
+                    <h4>Showing Recipe Results For: <span id="recipe-result"></span></h4>
+
+                </div>
+
+                <div id="recipe-container" class="list-group">
+                    <ul id="meal-ingredients" ></ul>
+                    <span id="meal-instruct"></span>
+
+                    <form id="meal-save">
+                        <button type="click" class="btn" id="meal-ingredient">save to shopping list</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Div box for MAPS api OR DRINKS api -->
+            <div id="mapsData" class="column is-5 drink-box">
+
+                <div class="drink-title">
+
+                    <h4>Showing Drink Results For: <span id="drink-search-term"></span></h4>
+
+                </div>
+
+                <div id="drink-container" class="list-group">
+                    <ul id="drink-ingredients" ></ul>
+                    <span id="drink-instruct"></span>
+
+                    <form id="drink-save">
+                        <button type="click" class="btn" id="drink-ingredient">save to shopping list</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search History here
+                <div class="columns">
         
-        <!-- Search Input & button here -->
-        <section>
+                    <div class="column is-11 search-history">
+        
+                        <h4>Search History:</h4>
+        
+                    </div>
+        
+                </div>
+                  SECTION ABOVE IS COMMENTED OUT FOR FUTURE PURPOSES-->
+                  
 
-            <form>
+        <!-- about section -->
+        <section class="columns about-class">
 
-                <label for="search">Search Recipes Here:</label>
-                <input type="text" placeholder="Search Recipes!" id="search" class="form-input" />
-                <button type="submit" class="btn">Search!</button>
+            <!-- div box for about website section -->
+            <div id="about-info" class="column is-12">
 
-            </form>
-            
+                <h2 class="section-title">About</h2>
+
+                <p class="about-info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi,
+                    nisi
+                    quam non ex eaque, velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque et perferendis sed porro nemo
+                    numquam veritatis
+                    officiis natus non eligendi fugit repellendus, debitis ut at quod neque placeat aspernatur
+                    recusandae unde iure!
+                    Possimus aut modi ut incidunt, earum nulla aperiam adipisci nobis dolor a quae id, laboriosam in?
+                </p>
+
+            </div>
+
         </section>
 
-        <!-- Div box for Recipe API -->
-        <div id="recipeData"></div>
+        <!-- nutrition section -->
+        <section class="columns" id="grocery-id">
 
-        <!-- Div box for MAPS api OR DRINKS api -->
-        <div id="mapsData"></div>
+            <div class="column is-7 grocery-box">
 
+                <h2 class="grocery-title">Grocery List</h2>
 
-        <!-- div box for about website section -->
-        <div class="about">
+                <img src="./assets/images/new_nutrition_img.webp" alt="Balance Your Meals!" class="grocery-img" />
 
-            <h3>About:</h3>
+                <div class="grocery-info">
+                    <ul id="grocery-list"></ul>
+                </div>
 
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo corporis ipsam eligendi ipsa commodi, nisi quam non ex eaque, 
-                velit iusto sint fugit dolore totam! Unde, blanditiis impedit. Aliquid, deserunt?
-            </p>
+            </div>
 
-        </div>
+            <div class="column is-4 fun-slide">
+                <h2 class="fun-title">Fun Facts!</h2>
+            </div>
 
-        <!-- div box for credit -->
-        <div class="credit">
+        </section>
 
-            <h3>Appication Created By:</h3>
+        <!-- box for creators -->
+        <section class="columns">
 
-            <ul>
-                <li>Yussel</li>
-                <li>Zachary</li>
-                <li>Marco</li>
-            </ul>
+            <div class="column is-12 link-name-box" id="creator-info">
 
-        </div>
+                <h2 class="creator-title">Appication Created By:</h2>
 
+                <div class="columns is-variable creator-name">
+                    <div class="column is-2 is-offset-1 name-border"><a href="#">Yussel</a></div>
+                    <div class="column is-2">-</div>
+                    <div class="column is-2 name-border"><a href="#">Zachary</a></div>
+                    <div class="column is-2">-</div>
+                    <div class="column is-2 name-border"><a href="#">Marco</a></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            This appliction was created by <a href="#creator-info">THIS GROUP</a> on 2022. Coding Bootcamp.
+        </footer>
 
     </main>
-    
+
+    <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
