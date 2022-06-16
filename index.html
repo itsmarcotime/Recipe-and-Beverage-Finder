@@ -67,11 +67,11 @@
                             <input type="text" placeholder="Start Searching For New Recipes Here!" id="search-form"
                                 class="form-input" />
 
-                            <input type="text" placeholder="Start Searching For New Beverages Here!" id=""
+                            <input type="text" placeholder="Start Searching For New Beverages Here!" id="drink-srch"
                                 class="form-input" /><br>
 
                             <button type="submit" class="btn" id="search-btn">Search for Recipe & Beverage!</button>
-                            <button type="submit" class="btn" id="">Random Search!</button>
+                            <button type="button" class="btn" id="rand-btn">Random Search!</button>
                 
                     </form>
                     
@@ -92,8 +92,14 @@
 
                 </div>
 
-                <div id="recipe-container" class="list-group"></div>
+                <div id="recipe-container" class="list-group">
+                    <ul id="meal-ingredients" ></ul>
+                    <span id="meal-instruct"></span>
 
+                    <form id="meal-save">
+                        <button type="click" class="btn" id="meal-ingredient">save to shopping list</button>
+                    </form>
+                </div>
             </div>
 
             <!-- Div box for MAPS api OR DRINKS api -->
@@ -105,10 +111,15 @@
 
                 </div>
 
-                <div id="drink-container" class="list-group"></div>
+                <div id="drink-container" class="list-group">
+                    <ul id="drink-ingredients" ></ul>
+                    <span id="drink-instruct"></span>
 
+                    <form id="drink-save">
+                        <button type="click" class="btn" id="drink-ingredient">save to shopping list</button>
+                    </form>
+                </div>
             </div>
-
         </div>
 
         <!-- Search History here-->
@@ -146,18 +157,17 @@
         </section>
 
         <!-- nutrition section -->
-        <section class="columns" id="nutrition-id">
+        <section class="columns" id="grocery-id">
 
-            <div class="column is-4 nutrition-box">
+            <div class="column is-4 grocery-box">
 
-                <h2 class="nutrition-title">Nutrition breif:</h2>
+                <h2 class="grocery-title">Grocery List</h2>
 
-                <img src="./assets/images/new_nutrition_img.webp" alt="Balance Your Meals!" class="nutrition-img" />
+                <img src="./assets/images/new_nutrition_img.webp" alt="Balance Your Meals!" class="grocery-img" />
 
-                <p class="nutrition-info">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt architecto, quaerat explicabo non
-                    consectetur suscipit dolore quibusdam molestiae. Adipisci maxime fugiat vel repellendus cum vero.
-                </p>
+                <div class="grocery-info">
+                    <ul id="grocery-list"></ul>
+                </div>
 
             </div>
 

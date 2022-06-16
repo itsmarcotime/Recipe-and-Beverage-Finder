@@ -118,6 +118,22 @@ header nav ul li a {
     font-weight: bold;
     padding-bottom: 20px;
 }
+.recipe-box button {
+    color: whitesmoke;
+    background-color: #687339;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.drink-box button {
+    color: whitesmoke;
+    background-color: #687339;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+}
 /* end recipe & drink */
 
 
@@ -161,14 +177,14 @@ header nav ul li a {
 
 
 /* start nutition & fun facts section*/
-.nutrition-box, .fun-slide {
+.grocery-box, .fun-slide {
     border: #3b3f20 solid 3px;
     margin: auto;
     border-radius: 10px;
     margin-top: 30px;
 }
 
-.nutrition-title {
+.grocery-title {
     font-size: 20px;
     font-weight: bold;
     color: #3b3f20;
@@ -180,7 +196,7 @@ header nav ul li a {
     text-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
 
-.nutrition-img {
+.grocery-img {
     width: 336px;
     height: 200px;
     border-radius: 60px;
@@ -191,9 +207,15 @@ header nav ul li a {
     margin-bottom: 25px;
 }
 
-.nutrition-info {
+.grocery-info {
     text-align: center;
     font-weight: bold;
+}
+.grocery-name {
+    font-size: 20px;
+}
+.ingredient-name {
+    font-size: 15px;
 }
 
 .fun-title {
